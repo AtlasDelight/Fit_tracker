@@ -1,0 +1,19 @@
+# Fichiers objets et binaires compilés
+*.o
+*.obj
+*.exe
+*.out
+fit_tracker
+
+# Dossiers de compilation
+build/
+bin/
+
+# Fichiers d'environnements de développement (VS Code, CLion, etc.)
+.vscode/
+.idea/
+cmake-build-debug/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
