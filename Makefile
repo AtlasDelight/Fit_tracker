@@ -11,11 +11,12 @@ EXEC = fit_tracker
 all: $(EXEC)
 
 # Édition des liens (création de l'exécutable)
-$(EXEC): $(OBJ)$(CXX) $(OBJ) -o$(EXEC)
+$(EXEC): $(OBJ)
+	$(CXX) $(OBJ) -o $(EXEC)
 
-# Compilation des fichiers sources en fichiers objets
+# Compilation des fichiers sources en fichiers objets (AVEC LES ESPACES CORRECTS)
 %.o: %.cpp
-	$(CXX)$(CXXFLAGS) -c $< -o$@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 # Nettoyage des fichiers compilés
 clean:
@@ -24,6 +25,6 @@ clean:
 # Recompilation complète
 rebuild: clean all
 
-# Vérification des fuites mémoire avec Valgrind (très utile pour vos pointeurs)
+# Vérification des fuites mémoire avec Valgrind
 valgrind: $(EXEC)
 	valgrind --leak-check=full --show-leak-kinds=all ./$(EXEC)
