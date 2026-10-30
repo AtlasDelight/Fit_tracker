@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Sportif.h"
-#include "ExerciceMusculation.h"
-#include "ExerciceCardio.h"
-#include "Aliment.h"
+#include "../include/Sportif.h"
+#include "../include/ExerciceMusculation.h"
+#include "../include/ExerciceCardio.h"
+#include "../include/Aliment.h"
 
 using namespace std;
 

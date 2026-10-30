@@ -1,4 +1,4 @@
-#include "Sportif.h"
+#include "../include/Sportif.h"
 
 // Constructeur par défaut
 Sportif::Sportif()

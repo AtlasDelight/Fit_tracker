@@ -1,4 +1,4 @@
-#include "ExerciceCardio.h"
+#include "../include/ExerciceCardio.h"
 
 // Constructeur par défaut
 ExerciceCardio::ExerciceCardio()

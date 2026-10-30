@@ -1,4 +1,4 @@
-#include "JournalAlimentaire.h"
+#include "../include/JournalAlimentaire.h"
 
 // Constructeur par défaut
 JournalAlimentaire::JournalAlimentaire() : nbAliments(0), capaciteMax(5) {

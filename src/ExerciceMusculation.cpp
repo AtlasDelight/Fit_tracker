@@ -1,4 +1,4 @@
-#include "ExerciceMusculation.h"
+#include "../include/ExerciceMusculation.h"
 
 // Constructeur par défaut
 ExerciceMusculation::ExerciceMusculation()

@@ -1,4 +1,4 @@
-#include "Aliment.h"
+#include "../include/Aliment.h"
 
 // Constructeur par défaut
 Aliment::Aliment() : nom("Inconnu"), calories(0), proteines(0.0), glucides(0.0), lipides(0.0) {}

@@ -1,4 +1,4 @@
-#include "Exercice.h"
+#include "../include/Exercice.h"
 
 // Constructeur par défaut
 Exercice::Exercice() : nom("Exercice sans nom"), dureeMinutes(0), difficulte(1) {}

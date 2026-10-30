@@ -1,5 +1,5 @@
-#include "JourneeFitness.h"
-#include "ExerciceMusculation.h"
+#include "../include/JourneeFitness.h"
+#include "../include/ExerciceMusculation.h"
 
 // Constructeur par défaut
 JourneeFitness::JourneeFitness()

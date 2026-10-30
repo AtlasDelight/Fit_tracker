@@ -2,29 +2,32 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17 -Iinclude -g
 
-# Récupération automatique des fichiers sources et objets
+# Récupération automatique de tous les fichiers .cpp dans src/ (y compris main.cpp)
 SRC = $(wildcard src/*.cpp)
 OBJ = $(SRC:.cpp=.o)
-EXEC = fit_tracker
+EXEC = fit_tracker.exe
+
+# Déclaration des cibles fictives
+.PHONY: all clean rebuild valgrind
 
 # Règle par défaut
 all: $(EXEC)
 
-# Édition des liens (création de l'exécutable)
+# Édition des liens
 $(EXEC): $(OBJ)
 	$(CXX) $(OBJ) -o $(EXEC)
 
-# Compilation des fichiers sources en fichiers objets (AVEC LES ESPACES CORRECTS)
+# Compilation des .cpp en .o
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-# Nettoyage des fichiers compilés
+# Nettoyage compatible Windows PowerShell / CMD
 clean:
-	rm -f src/*.o $(EXEC)
+	del /Q src\*.o $(EXEC) 2>nul || rm -f $(OBJ) $(EXEC)
 
 # Recompilation complète
 rebuild: clean all
 
-# Vérification des fuites mémoire avec Valgrind
+# Valgrind (si exécuté sous WSL / Linux)
 valgrind: $(EXEC)
 	valgrind --leak-check=full --show-leak-kinds=all ./$(EXEC)
